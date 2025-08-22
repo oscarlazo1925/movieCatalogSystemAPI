@@ -31,7 +31,7 @@ mongoose.connection.once("open", () =>
 
 
 app.use("/users", userRoutes);
-app.use("/moviesRoutes", moviesRoutes);
+app.use("/movies", moviesRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`API is now online on port ${process.env.PORT || 3000}`);
@@ -39,4 +39,5 @@ app.listen(process.env.PORT || 3000, () => {
 
 
 module.exports = { app, mongoose };
+
 
