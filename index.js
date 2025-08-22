@@ -23,7 +23,7 @@ mongoose.connection.on("error", (err) => {
 });
 
 const userRoutes = require("./routes/userRoutes");
-const moviesRoutes = require(".routes/moviesRoutes");
+const moviesRoutes = require("./routes/moviesRoutes");
 
 mongoose.connection.once("open", () =>
   console.log("Now connected to MongoDB Atlas.")
@@ -39,3 +39,4 @@ app.listen(process.env.PORT || 3000, () => {
 
 
 module.exports = { app, mongoose };
+
