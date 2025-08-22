@@ -23,7 +23,7 @@ mongoose.connection.on("error", (err) => {
 });
 
 const userRoutes = require("./routes/userRoutes");
-const workoutRoutes = require("./routes/workoutRoutes");
+const moviesRoutes = require(".routes/moviesRoutes");
 
 mongoose.connection.once("open", () =>
   console.log("Now connected to MongoDB Atlas.")
@@ -31,10 +31,11 @@ mongoose.connection.once("open", () =>
 
 
 app.use("/users", userRoutes);
-app.use("/workouts", workoutRoutes);
+app.use("/moviesRoutes", moviesRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`API is now online on port ${process.env.PORT || 3000}`);
 });
+
 
 module.exports = { app, mongoose };
